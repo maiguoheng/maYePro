@@ -15,13 +15,9 @@ export default new Router({
       component: ()=>import('./pages/login')
     },
     {
-      path: '/test-route',
-      component: ()=>import('./components/HelloWorld'),
-      children:[{
-          path: 'abc3',
-          component: ()=>import('./components/abc')
-        
-      }]
+      path: '/home',
+      component: ()=>import('./pages/main')
+      
     }
     
   ]
