@@ -7,21 +7,22 @@ export default new Router({
 
   routes: [
     {
-      path: '/test-route/',
+      path:'/',
+      redirect:'/login'
+    },
+    {
+      path: '/login',
+      component: ()=>import('./pages/login')
+    },
+    {
+      path: '/test-route',
       component: ()=>import('./components/HelloWorld'),
       children:[{
           path: 'abc3',
           component: ()=>import('./components/abc')
         
       }]
-    },
-    {
-      path: '/abc',
-      component: ()=>import('./components/HelloWorld')
-    },
-    {
-      path: '/abc2',
-      component: ()=>import('./components/HelloWorld2')
     }
+    
   ]
 })

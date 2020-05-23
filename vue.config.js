@@ -1,10 +1,16 @@
 const path = require('path');
 const merge = require('webpack-merge')
-
+function resolve(dir) {
+    return path.join(__dirname, dir)
+}
 
 module.exports = merge({
     // publicPath: '/test-route/',
-
+    chainWebpack: (config) => {
+        config.resolve.alias
+            .set('@assets', resolve('src/assets'))
+            .set('@components', resolve('src/components'))
+    },
     devServer: {
         disableHostCheck: true,
         // host: 'localhost',
