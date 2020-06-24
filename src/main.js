@@ -8,7 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
-
+//mgh
 Vue.prototype.$gbdata = gbdata
 
 //todo 路由导航,判断权限
