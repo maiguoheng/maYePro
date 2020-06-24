@@ -17,7 +17,7 @@ module.exports = merge({
         // port: 8081,
         proxy: {
             '^/api': {
-                target: 'abc.com',
+                target: 'abcccc.com',
                 ws: true,
                 changeOrigin: true
             }
